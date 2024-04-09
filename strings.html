@@ -1,0 +1,24 @@
+<!DOCTYPE html> <!-- This initializes the strings.html file -->
+<html lang="en"> <!-- This sets the language of the file to English -->
+<head> <!-- This is the head of the file -->
+    <title>User Input Validation</title> <!-- This sets the title of the webpage tab to User Input Validation -->
+    <link rel="stylesheet" href="main.css"> <!-- This links the main.css file to our current file -->
+</head>
+
+<body> <!-- This is the body of the file -->
+    <img class="left-image" src="funnihaha.png"> <!-- This adds an image to the left side of the webpage -->
+    <img class="right-image" src="funniimage.png"> <!-- This adds an image to the right side of the webpage -->
+    <h1>Validate Your Info</h1> <!-- This adds a header to the webpage -->
+    <form id="validationForm"> <!-- This creates a form with the id of validationForm that is referenced to as #validationform in main.css and allows us call it using .innerhtml in our Validator.js -->
+        <label for="firstName">First Name:</label> <!-- This creates a label for the input field of firstName -->
+        <input type="text" id="firstName" name="firstName"> <!-- This creates a textbox for the user to input their first name -->
+        <label for="lastName">Last Name:</label> <!-- This creates a label for the input field of lastName -->
+        <input type="text" id="lastName" name="lastName"> <!-- This creates a textbox for the user to input their last name -->
+        <label for="zipCode">Zip Code:</label> <!-- This creates a label for the input field of zipCode -->
+        <input type="text" id="zipCode" name="zipCode"> <!-- This creates a textbox for the user to input their zip code -->
+        <input class="Submit-button" type="submit" value="Submit"> <!-- This creates a submit button for the user to submit their information and uses class="Submit-button" this way we can separate it in our main.css file for reference and isolate the design -->
+    <p id="result"></p> <!-- This is the result that is referenced to as #result in main.css and allows us call it using .innerhtml in our Validator.js -->
+    <p id="secretMessage" style="display: none;">Welcome to our secret program :D</p> <!-- This is the secret message that is referenced to as #secretMessage in main.css and allows us call it using .innerhtml in our Validator.js -->
+    <script src="Validator.js"></script> <!-- This links the Validator.js file to our current file -->
+</body>
+</html>

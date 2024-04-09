@@ -1,0 +1,82 @@
+body::before { /* This is the body before the body that exists. It is being used to separate my elements the main body. */
+    content: ""; /* This allows me to draw the border by generating an empty text box */
+    position: absolute; /* This centers the outline of the textbox that wraps around my elements */
+    top: 50%; /* This sets the middle of my text box to be half way down the page */
+    left: 50%; /* This sets the middle of my text box to be half way from the side of the page */
+    width: 455px; /* This sets left to right to be 50% */
+    height: 490px; /* This sets top to bottom to be 50% */
+    background-color: #02bed3; /* This sets the color of the text box to white */
+    border: 2px solid black; /* This sets the border of the text box to be 2px thick and black */
+    border-radius: 60px; /* This sets the border to be rounded. The higher the pixels, the more curved the corners become */
+    transform: translate(-50%, -50%); /* This centers the text box in the middle of the page */
+    z-index: -1; /* This sets the text box to be behind the body of the page */
+}
+
+body {
+    background-color: aqua; /* This sets the background color of the page to aqua */
+    color: black; /* This sets the text color to black */
+    display: flex; /* This sets my H1 and P elements in the center of the page to meet up with the button. The button is a separate property */
+    flex-direction: column; /* This sets the elements on top of each other this way they're not strung across and connected to my button */
+    justify-content: center; /* This centers the elements vertically to the center of the web page */
+    align-items: center; /* This centers the elements horizontally to the center of the web page */
+    height: 100vh; /* This sets the height of the page to be where the viewer is going to be viewing it */
+    margin: 0; /* This sets the margin of the page */
+    position: relative; /* This allows me to utilize the parent child functionality of the body::before */
+}
+
+.left-image { /* This is the class reference, "left-image" in strings.html and defines the placement structure for the webpage */
+    position: absolute; /* This isolates the images outside the other elements in order to allign it left */
+    left: 0; /* This alligns the image to the left of the page */
+    padding: 45px; /* This sets the padding of the image to 45px to the right so that the image doesn't touch the edge */
+    height: 60%; /* This sets the height of the image to be 50% of the page - you can use this to set the size of the image */
+    width: 30%; /* This sets the width of the image to be 25% of the page - you can use this to set the size of the image */
+}
+
+.right-image { /* This is the class reference, "right-image" in strings.html and defines the placement structure for the webpage */
+    position: absolute; /* This isolates the images outside the other elements in order to allign it right */
+    right: 0; /* This alligns the image to the right of the page */
+    padding: 45px; /* This sets the padding of the image to 45px to the left so that the image doesn't touch the edge */
+    height: 60%; /* This sets the height of the image to be 50% of the page - you can use this to change the size of the image */
+    width: 30%; /* This sets the width of the image to be 25% of the page - You can use this to chang the size of the image */
+}
+
+header {
+    padding: 20px; /* This sets the padding of the header */
+    font-size: 30px; /* This sets the font size */
+}
+
+#validationForm label, /* This is the label design for the input box and text that says what it is for. The "," represents what is equivocally an and statement. This links to our form that we created */
+#validationForm input {
+    display: block; /* This sets the display to block so that the label and input are on top of each other */
+    margin-bottom: 10px; /* This sets the margin from the bottom */
+    border-radius: 20px; /* This sets the border to be rounded. The higher the pixels, the more curved the corners become */
+    padding: 5px 5px; /* This sets the padding of the input box. The pixels seem small, but are larger than you think increasing it anymore will make it too big for our web page */
+}
+
+#validationForm input[class="Submit-button"] { /* This overwrites #validationForm for the specific input classified as "Submit-button" so that it can have it's own unique design */
+    background-color: #4CAF50; /* This sets the background color of the button to green */
+    border: none; /* This defines the border of the button */
+    color: white; /* This sets the color of the text */
+    padding: 15px 64px; /* This defines the area around my text for the button. This determines H x W on the button */
+    border-radius: 60px; /* This sets the border to be rounded. The higher the pixels, the more curved the corners become */
+    text-decoration: none; /* This removes the underline from the text */
+    font-size: 16px; /* This sets the font size */
+    cursor: pointer; /* This sets the cursor to a pointer */
+    margin-top: 20px; /* This sets the margin of the button*/
+    box-shadow: 0 8px #999; /* This creates a shadow behind our button */
+}
+
+#validationForm input[class="Submit-button"]:hover { /* This overwrites #validationForm for the specific input classified as "Submit-button" so that it can have it acquires the hover attribute */
+    background-color: #45a049; /* This sets the background color of the button to a darker green when hovered over */
+}
+
+#validationForm input[class="Submit-button"]:active { /* This overwrites #validationForm for the specific input classified as "Submit-button" so that it can have it acquires the active attribute */
+    background-color: #45a049; /* This sets the background color of the button to a darker green when clicked */
+    box-shadow: 0 5px #666; /* This creates a shadow behind our button when clicked */
+    transform: translateY(4px); /* This moves the button down 4 pixels when clicked creating the press down effect */
+}
+
+#result {
+    margin-top: 20px; /* This sets the margin from the top so there is spacing between our text box and result */
+    font-size: 20px; /* This sets the font size of the result displayed */
+}
